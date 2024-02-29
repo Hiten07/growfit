@@ -37,7 +37,7 @@ const Navbar = () => {
 
                         <li>
                             <NavLink to="/contact">
-                                Contact
+                                Contact us
                             </NavLink>
                         </li>
                     </ul>
