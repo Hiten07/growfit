@@ -1,0 +1,10 @@
+.container {
+    padding: 2.4rem 2.4rem;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    gap: 5rem;
+}
+
