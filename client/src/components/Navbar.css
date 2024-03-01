@@ -1,10 +1,33 @@
-.container {
-    padding: 2.4rem 2.4rem;
-    background-color: black;
+/* .container {
+    max-width:160rem;
+    padding: 4.2rem 2.4rem;
+    display: flex;
+    background-color: #fa2b2bc1;
+    justify-content: space-between;
+
 }
 
 ul {
+    
     display: flex;
-    gap: 5rem;
+    gap: 3.2rem;
 }
 
+a {
+    text-decoration: none;
+    font-size: 200%;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: red;
+    background-color: white;
+    
+}
+
+li {
+    list-style: none;
+}
+ */
