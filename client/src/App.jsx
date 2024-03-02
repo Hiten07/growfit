@@ -6,6 +6,8 @@ import Login from "./Pages/Login.jsx"
 import Register from "./Pages/Register.jsx"
 import Navbar from "./components/Navbar.jsx"
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 function App() {
