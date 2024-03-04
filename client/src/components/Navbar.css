@@ -1,33 +1,9 @@
-/* .container {
-    max-width:160rem;
-    padding: 4.2rem 2.4rem;
-    display: flex;
-    background-color: #fa2b2bc1;
-    justify-content: space-between;
-
+.navbar{
+    background-color: #334155;
 }
-
-ul {
-    
-    display: flex;
-    gap: 3.2rem;
+#nav-link:hover{
+    background-color: white ;
+    color: black !important; 
+    border-radius: 5px;
+    transition: 0.2s ease-in;
 }
-
-a {
-    text-decoration: none;
-    font-size: 200%;
-    color: white;
-    padding: 0.7rem 2rem;
-    border-radius: 10px;
-}
-
-a:hover {
-    color: red;
-    background-color: white;
-    
-}
-
-li {
-    list-style: none;
-}
- */
