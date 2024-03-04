@@ -32,86 +32,112 @@ const Register = () => {
         <>
         <section>
             <main>
-                <div className="grid grid-cols-1">
-                    <div className="grid grid-cols-2 gap-10">
-                        <div className="registration-image">
-                            <img src="/images/registration.png" alt="Registration-image" width="500" height="500">
+                <div className="container m-5 mx-auto">
+                    <div className="row justify-content-md-center">
+                        <div className="col">
+                            <img src="/images/registration.svg" alt="Registration-image" width="500" height="500">
                             </img>
                         </div>
-                        <div className="">
-                            <h1 className="">Registration Form</h1>
+                        <div className="col">
+                            <h1 className="text-center">Registration Form</h1>
 
                             <br/>
 
                             <form onSubmit={handleSubmit}>
-                                <div>
-                                    <label htmlFor="username">Username</label>
-                                    <input 
+                                <div className="shadow-lg p-5 rounded">
+                                    <div className="form-gruop">
+                                        <label className="mb-1 fs-2" htmlFor="username">Username</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4 "
                                         type="text" 
                                         name="username" 
                                         id="username"
                                         required
-                                        placeholder="username" 
+                                        placeholder="Username" 
                                         autoComplete="off"
                                         value={user.username}
                                         onChange={handleInput}
-                                    />
-
-                                    <label htmlFor="email">Email</label>
-                                    <input 
+                                        /><br/>
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                        <label className="mb-1 fs-2" htmlFor="email">Email</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4"
                                         type="email" 
                                         name="email" 
                                         id="email"
-                                        placeholder="enter your email"
+                                        placeholder="Enter your email"
                                         required 
                                         value={user.email}
                                         onChange={handleInput}
-                                    />
-
-                                    <label htmlFor="phone">number</label>
-                                    <input 
+                                        />
+                                        <small id="emailHelp" class="form-text text-muted mb-4">We'll never share your email with anyone else.</small><br/>
+                                    </div><br/>
+                                    
+                                    <div className="form-goup">
+                                        <label className="mb-1 fs-2" htmlFor="phone">Number</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4"
                                         type="phone"
                                         maxLength={10}
                                         name="phone" 
                                         id="phone"
-                                        placeholder="enter your number"
+                                        placeholder="Enter your number"
                                         required 
                                         value={user.phone}
                                         onChange={handleInput}
-                                    />
+                                        /><br/>
+                                    </div>
+                                    <div class="radio fs-2 mb-2">Join As a<br/>
+                                        <label className="mb-1 fs-4 pe-4" htmlFor="radio">
+                                            <input className="" type="radio" name="optradio" checked/>Customer</label>
 
-                                    <label htmlFor="password">password</label>
-                                    <input 
+                                        <label className="mb-1 fs-4" htmlFor="radio">
+                                            <input  className="" type="radio" name="optradio"/>Gym Owner</label>
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                        <label className="mb-1 fs-2" htmlFor="password">Password</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4"
                                         type="password" 
                                         name="password" 
                                         id="password"
-                                        placeholder="password"
+                                        placeholder="Password"
                                         required 
                                         value={user.password}
                                         onChange={handleInput}
-                                    />
-
-                                    <label htmlFor="password">confirm password</label>
-                                    <input 
+                                        /><br/>
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                        <label className="mb-1 fs-2" htmlFor="password">Confirm password</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4"
                                         type="password" 
                                         name="cpassword" 
                                         id="cpassword"
-                                        placeholder="confirm password"
+                                        placeholder="Confirm password"
                                         required 
                                         value={user.cpassword}
                                         onChange={handleInput}
-                                    /> 
-                                </div>
-
-                                <br/>
+                                        /> <br/>
+                                    </div>
+                                    <br/>
 
                                 <button 
+                                className="btn btn-danger fs-4 px-3 py-2"
                                 type="submit"
-                                value="submit now"
+                                value="Submit now"
                                 >
-                                    Register now
+                                    Register
                                 </button>
                                     
+                                </div>
+
+                                
+                                
                             </form>
                         </div>
                     </div>

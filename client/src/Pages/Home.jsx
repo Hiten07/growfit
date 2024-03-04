@@ -1,42 +1,46 @@
+import { NavLink } from "react-router-dom";
+import "./Home.css";
+
 const Home = () => {
     return (
         <>
+        <div className="bg">
+        
            <main>
                 <section>
-                    <div className="home-section">
+                    <div className="">
 
-                        <div className="image-home">
-                            <img src="./images/registration.png"
-                                alt="home page"
-                                width={400}
-                                height={400}
-                            >
-                            </img>
-                        </div>
+                        <div className="">
+                            <div className="text-white">
+                                    <p className="p1">Connecting Your Life With Fitness !</p>
+                                    
+                            </div>
+                            <div className="">
+                                <div className="para-group text-white">
+                                    <p className="p2">Welcome to the GrowFit..!</p>
+                                    <p className="p3">Grow Fit is web-app that helps Gym Businesses<br/> To Bring Their 
+                                    Business it On InternetThrough Our System.<br/>
+                                    Our Web-app will connect Gym Businesses<br/> And Fitness Enthuasiasts 
+                                    And Will Work As Middleware</p>
 
-                        <div className="container grid grid-cols-2">
-                            <div className="home-content">
-                                    <p>Connecting your life with fitness !</p>
-                                    <h1>Welcome to the GrowFit</h1>
-                                    <p>Grow Fit is web-app that helps Gym Businesses To Bring Their 
-                                    Business it On InternetThrough Our System.
-                                    Our Web-app will connect Gym Businesses And Fitness Enthuasiasts 
-                                    And Will Work As Middleware.</p>
+                                </div>
+                                <div className="btn-group gap-5 ">
+                                    <NavLink to="\register">
+                                        <button className="btn btn-danger text-white fs-5">Register Now</button>
+                                    </NavLink>
+
+                                    <NavLink to="\contact">
+                                        <button className="btn btn-danger text-white fs-5">Connect With Us</button>
+                                    </NavLink>
+                                </div>
                             </div>
 
-                            <div className="btn-group">
-                                <a href="\register">
-                                    <button className="btn">Register Now</button>
-                                </a>
-
-                                <a href="\contact">
-                                    <button className="btn">Connect With Us</button>
-                                </a>
-                            </div>
+                                
                         </div>
                     </div>
                 </section>
            </main>
+        </div>
         </>
     )
 }

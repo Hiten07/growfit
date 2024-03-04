@@ -30,52 +30,67 @@ const Login = () => {
         <>
         <section>
             <main>
-                <div className="grid grid-cols-1">
-                    <div className="grid grid-cols-2 gap-10">
-                        <div className="registration-image">
-                            <img src="/images/registration.png" alt="Registration-image" width="500" height="500">
+                <div className="container m-5 mx-auto">
+                    <div className="row justify-content-md-center">
+                        <div className="col">
+                            <img src="/images/login.svg" alt="Registration-image" width="500" height="500">
                             </img>
                         </div>
-                        <div className="">
-                            <h1 className="">Login</h1>
+                        <div className="col mt-5">
+                            <h1 className="fs-1 text-center">Login</h1>
 
                             <br/>
 
                             <form onSubmit={handleSubmit}>
-                                <div>
-                                    <label htmlFor="email">Email</label>
-                                    <input 
+                                <div className=" shadow-lg p-5 rounded">
+                                    <div className="form-group">
+                                        <label className="mb-1 fs-2" htmlFor="email">Email</label>
+                                        <input 
+                                        className="form-control form-control-lg fs-4 "
                                         type="email" 
                                         name="email" 
                                         id="email"
-                                        placeholder="enter your email"
+                                        placeholder="Enter your email"
                                         required 
                                         value={user.email}
                                         onChange={handleInput}
-                                    />
-
-                                    <label htmlFor="password">password</label>
-                                    <input 
+                                        />
+                                    </div>
+                                    <br/>
+                                    <div className="form-group ">
+                                        <label className="mb-1 fs-2" htmlFor="password">password</label>
+                                        <input
+                                        className="form-control form-control-lg fs-4 " 
                                         type="password" 
                                         name="password" 
                                         id="password"
-                                        placeholder="password"
+                                        placeholder="Password"
                                         required 
                                         value={user.password}
                                         onChange={handleInput}
-                                    />
+                                        />
+                                    </div>
+                                    
                                 <br/>
-                            </div>
-                                <button 
+                                <button
+                                className="btn btn-danger fs-4 px-3 py-2" 
                                 type="submit"
-                                value="submit now"
+                                value="Submit now"
                                 >
-                                    Register now
-                                </button>      
+                                    Login
+                                </button> 
+                                <br/>
+                                <br/>
+                                <div className="inline row justify-content-md-center">
+                                    <h4>Don't have an acccount?</h4>
+                                    <NavLink className="fs-4" to="/register">Register here</NavLink>  
+                                </div>
+                                
+                            </div>
+                                   
                             </form>
                             
-                            <h4>Don't have an acccount?</h4>
-                            <NavLink to="/register">Register here</NavLink>
+                            
                         </div>
                     </div>
                 </div>
