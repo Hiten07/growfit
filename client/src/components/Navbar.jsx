@@ -4,7 +4,7 @@ const Navbar = () => {
     return(
         <>
         <header>
-            <nav className="navbar navbar-expand-sm py-3">
+            <nav className="navbar navbar-expand-sm py-3 fixed-top">
                 <div className="container-fluid h-50">
                     <div className="navbar-brand">
                         <NavLink className="fs-1 text-white w-400 ml-5 text-decoration-none" to="/">GROW FIT</NavLink>

@@ -1,5 +1,6 @@
 .navbar{
     background-color: #334155;
+    position: fixed;
 }
 #nav-link:hover{
     background-color: white ;

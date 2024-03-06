@@ -38,8 +38,8 @@ const Register = () => {
                             <img src="/images/registration.svg" alt="Registration-image" width="500" height="500">
                             </img>
                         </div>
-                        <div className="col">
-                            <h1 className="text-center">Registration Form</h1>
+                        <div className="col mt-5">
+                            <h1 className="text-center mt-5">Registration Form</h1>
 
                             <br/>
 

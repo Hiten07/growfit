@@ -37,7 +37,7 @@ const Login = () => {
                             </img>
                         </div>
                         <div className="col mt-5">
-                            <h1 className="fs-1 text-center">Login</h1>
+                            <h1 className="fs-1 text-center mt-5">Login</h1>
 
                             <br/>
 
