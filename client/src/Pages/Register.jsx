@@ -133,11 +133,7 @@ const Register = () => {
                                 >
                                     Register
                                 </button>
-                                    
-                                </div>
-
-                                
-                                
+                                </div>                  
                             </form>
                         </div>
                     </div>
