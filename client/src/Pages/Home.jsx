@@ -56,7 +56,7 @@ const Home = () => {
                 <div class="content d-flex flex-column align-items-center justify-content-center">
                     <div>
                         <h3 class=" fs-2 text-danger">Find Gym</h3>
-                        <p class="fs-5 text-white"><h className="fs-3">Find a gyms that fit for you</h><br/>-Know their address,services,
+                        <p class="fs-4 text-white"><h className="fs-4">Find a gyms that fit for you</h><br/>-Know their address,services,
                         charges and all you nedd a select a perfect for your killer workout place.</p>
                     </div>
                 </div>

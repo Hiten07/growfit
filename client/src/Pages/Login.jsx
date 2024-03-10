@@ -32,7 +32,7 @@ const Login = () => {
             <main>
                 <div className="container m-5 mx-auto">
                     <div className="row justify-content-md-center">
-                        <div className="col">
+                        <div className="image col">
                             <img src="/images/login.svg" alt="Registration-image" width="500" height="500">
                             </img>
                         </div>
