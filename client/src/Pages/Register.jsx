@@ -7,15 +7,31 @@ const Register = () => {
         username: "",
         email: "",
         phone: "",
-        password: ""
+        userType: "",
+        password: "",
+        cpassword: "",
     })
 
     // handing the form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(user);
         console.log(user);
-    }
+
+        try {
+        const response = await fetch(`http://localhost:5000/api/auth/register`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+        });  
+            console.log(response);
+        } 
+        
+        catch (error) {
+            console.log("Register: ", error);   
+        }
+    };
 
     const handleInput = (e) => {
 
@@ -68,11 +84,12 @@ const Register = () => {
                                         name="email" 
                                         id="email"
                                         placeholder="Enter your email"
+                                        autoComplete="off"
                                         required 
                                         value={user.email}
                                         onChange={handleInput}
                                         />
-                                        <small id="emailHelp" class="form-text text-muted mb-4">We'll never share your email with anyone else.</small><br/>
+                                        <small id="emailHelp" className="form-text text-muted mb-4">We'll never share your email with anyone else.</small><br/>
                                     </div><br/>
                                     
                                     <div className="form-goup">
@@ -84,17 +101,36 @@ const Register = () => {
                                         name="phone" 
                                         id="phone"
                                         placeholder="Enter your number"
+                                        autoComplete="off"
                                         required 
                                         value={user.phone}
                                         onChange={handleInput}
                                         /><br/>
                                     </div>
-                                    <div class="radio fs-2 mb-2">Join As a<br/>
-                                        <label className="mb-1 fs-4 pe-4" htmlFor="radio">
-                                            <input className="" type="radio" name="optradio" checked/>Customer</label>
+                                    <div className="radio fs-2 mb-2">Join As a<br/>
+                                        <label className="mb-1 fs-4 pe-4" htmlFor="radio1">
+                                            <input 
+                                            type="radio" 
+                                            name="userType"
+                                            id="radio1" 
+                                            value="customer"
+                                            onChange={handleInput}
+                                            
+                                            />
+                                            customer
+                                        </label>
 
-                                        <label className="mb-1 fs-4" htmlFor="radio">
-                                            <input  className="" type="radio" name="optradio"/>Gym Owner</label>
+                                        <label className="mb-1 fs-4" htmlFor="radio2">
+                                            <input 
+                                            type="radio"
+                                            name="userType"
+                                            id="radio2" 
+                                            value="gym-owner"
+                                            onChange={handleInput}
+                                            defaultChecked
+                                            />
+                                            gym-owner
+                                        </label>
                                     </div>
                                     
                                     <div className="form-group">
@@ -105,6 +141,7 @@ const Register = () => {
                                         name="password" 
                                         id="password"
                                         placeholder="Password"
+                                        autoComplete="off"
                                         required 
                                         value={user.password}
                                         onChange={handleInput}
@@ -112,13 +149,14 @@ const Register = () => {
                                     </div>
                                     
                                     <div className="form-group">
-                                        <label className="mb-1 fs-2" htmlFor="password">Confirm password</label>
+                                        <label className="mb-1 fs-2" htmlFor="cpassword">Confirm password</label>
                                         <input 
                                         className="form-control form-control-lg fs-4"
                                         type="password" 
                                         name="cpassword" 
                                         id="cpassword"
                                         placeholder="Confirm password"
+                                        autoComplete="off"
                                         required 
                                         value={user.cpassword}
                                         onChange={handleInput}
