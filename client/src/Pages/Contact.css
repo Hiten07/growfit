@@ -1,0 +1,6 @@
+.container .row .image {
+    margin-top: 10%;
+}
+.container .row .col .social-connect .social-icon:hover{
+    color:blue;
+}

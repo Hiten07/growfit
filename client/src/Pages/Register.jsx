@@ -50,12 +50,12 @@ const Register = () => {
             <main>
                 <div className="container m-5 mx-auto">
                     <div className="row justify-content-md-center">
-                        <div className="col">
+                        <div className="image col">
                             <img src="/images/registration.svg" alt="Registration-image" width="500" height="500">
                             </img>
                         </div>
-                        <div className="col">
-                            <h1 className="text-center">Registration Form</h1>
+                        <div className="col mt-5">
+                            <h1 className="text-center mt-5">Registration Form</h1>
 
                             <br/>
 
@@ -164,13 +164,13 @@ const Register = () => {
                                     </div>
                                     <br/>
 
-                                <button 
-                                className="btn btn-danger fs-4 px-3 py-2"
-                                type="submit"
-                                value="Submit now"
-                                >
-                                    Register
-                                </button>
+                                    <button 
+                                    className="btn btn-danger fs-4 px-3 py-2"
+                                    type="submit"
+                                    value="Submit now"
+                                    >
+                                        Register
+                                    </button>
                                 </div>                  
                             </form>
                         </div>
