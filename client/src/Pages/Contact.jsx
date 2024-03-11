@@ -81,7 +81,7 @@ const Contact = () => {
                                             id="message" 
                                             cols="30" 
                                             rows="10"
-                                            placeholder="Messages"
+                                            placeholder="Enter your message : "
                                             value={contact.message}
                                             onChange={handleInput}
                                             autoComplete="off"
@@ -92,24 +92,17 @@ const Contact = () => {
                                         <br/><br/>
                                         
                                         <div className="social-connect form-gruop text-center">
-                                            <h3>You can also connect with:</h3><br/>
+                                            <h3>You can also connect with us</h3><br/>
                                             <InstagramIcon className="social-icon" sx={{ fontSize: 25,marginX:2,cursor:"pointer" }}/>
                                             <FacebookIcon className="social-icon" sx={{ fontSize: 25,marginX:2,cursor:"pointer" }}/>
                                             <TwitterIcon className="social-icon" sx={{ fontSize: 25,marginX:2,cursor:"pointer" }}/>
                                         </div>
-                                    </div>
-
-                                    
-
-                                     
-                                    
+                                    </div>                        
                                 </form>
-                               
                             </div>                              
                         </div>
                     </div>
                 </main>
-                
             </section> 
         </>
     )
