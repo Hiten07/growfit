@@ -1,6 +1,5 @@
 // action is the description of what you want to do 
 // and dispatch is the function that carries that task.
-
 const registeredUsers = require('../models/register-schema');
 
 const home = async (req,res) => {
@@ -18,15 +17,17 @@ const home = async (req,res) => {
 const register = async (req,res,next) => {
     try {
 
-        // console.log(req.body);
+        // getting the data from registeration form
         const {username,email,phone,userType,password,cpassword} = req.body;
 
+        // checking if user is already available or not
         const userExists = await registeredUsers.findOne({ email });
 
         if(userExists) {
            return res.status(400).send({msg: "email already exists"});
         }
 
+        // creating new user in our collection
         const userCreated = await registeredUsers.create({username,email,phone,userType,password,cpassword});
 
         res
@@ -37,14 +38,16 @@ const register = async (req,res,next) => {
             userId: userCreated._id.toString()    
         });
     } catch (error) {
-        // res.status(500).json({msg: "internal server error"});
-        next(error);
+        res.status(500).json({msg: "internal server error"});
+        // next(error);
 
     }
 }
 
 const login = async (req,res) => {
         try {
+
+            // getting data from login form
             const {email,password} = req.body;
 
             const userExists = await registeredUsers.findOne({email});
@@ -56,7 +59,8 @@ const login = async (req,res) => {
             const user = await userExists.comparePassword(password,userExists.password);
 
             if(user) {
-                res.status(200)
+                res
+                .status(200)
                 .json(
                 {
                     msg: "user login successfully", 
