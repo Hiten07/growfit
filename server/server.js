@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const authRoute = require('./routers/auth-router');
 const connectDb = require('./utils/dbconfig');
-const errorMiddleware = require('./middlewares/error-middleware');
+// const errorMiddleware = require('./middlewares/error-middleware');
 
 const corsOptions = {
     origin: "http://localhost:5173",
@@ -20,7 +20,7 @@ app.use(express.json());
 // at a specific URL prefix
 
 app.use("/api/auth",authRoute);
-app.use(errorMiddleware);
+// app.use(errorMiddleware);
 
 // app.get("/",(req,res) => {
 //         res.status(200).send("Welcome !");

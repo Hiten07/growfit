@@ -2,29 +2,29 @@ const { z } = require('zod');
 
 // register schema
 
-const registerSchema = z.object({
+const registerValidationSchema = z.object({
     username: z
-    .string({required_error: "Name is required"})
+    .string({required_error: "username is required"})
     .trim()
-    .min(3, {message: "Name must be of alteast 3 characters"})
-    .max(255, {message: "Name must not be more than 255 characters"}),
-
-    number: z
-    .string({required_error: "Number is required"})
-    .trim()
-    .min(10, {message: "Phone number should have 10 digits..."}),
+    .min(3, {message: "userame should have alteast 3 characters"})
+    .max(255, {message: "username should have atmost 255 characters"}),
     
     email: z
-    .string({required_error: "Name is required"})
+    .string({required_error: "email is required"})
     .trim()
     .email({message: "Invalid email address"})
-    .min(3, {message: "Email must be of alteast 3 characters"})
-    .max(255, {message: "Email must not be more than 255 characters"}),
+    .min(3, {message: "Email should have alteast 3 characters"})
+    .max(255, {message: "Email should have atmost 255 characters"}),
+
+    phone: z
+    .number({required_error: "Phone Number is required"}),
+    .min(10, {message: "Phone number should have atleast 10 digits..."})
+    .max(20, {message: "Phone number should have atmost 20 digits..."}),
     
     password: z
-    .string({required_error: "Name is required"})
-    .min(3, {message: "Password must be of alteast 3 characters"})
-    .max(1024, {message: "Password must not be more than 255 characters"}),
+    .string({required_error: "password is required"})
+    .min(3, {message: "Password should have alteast 3 characters"})
+    .max(1024, {message: "Password should have atmost 255 characters"}),
 })
 
-module.exports = registerSchema;
+module.exports = registerValidationSchema;
