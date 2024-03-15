@@ -14,7 +14,7 @@ const home = async (req,res) => {
     }
 } 
 
-const register = async (req,res,next) => {
+const register = async (req,res) => {
     try {
 
         // getting the data from registeration form
@@ -38,8 +38,8 @@ const register = async (req,res,next) => {
             userId: userCreated._id.toString()    
         });
     } catch (error) {
-        res.status(500).json({msg: "internal server error"});
-        // next(error);
+        console.log(error);
+        res.status(500).json({msg: "internal server error..."});
 
     }
 }
@@ -75,7 +75,7 @@ const login = async (req,res) => {
         } catch (error) {
             res
             .status(500)
-            .json({msg: "Internal server error"});
+            .json({msg: "Internal server error....."});
         }
 };
 

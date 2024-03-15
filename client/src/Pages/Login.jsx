@@ -1,18 +1,45 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
+const URL = "http://localhost:5000/api/auth/login";
 
 const Login = () => {
     
+    const navigate = useNavigate();
     const [user,setUser] = useState({
         email: "",
         password: "",
     })
 
     // handing the form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(user);
-        console.log(user);
+
+        try {  
+        const response = await fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user)
+        })   
+
+        console.log(response);
+
+        if(response.ok) {
+            setUser({ email: "", password: "",});
+            alert("Login Successful");
+            navigate("/");
+        }
+        else {
+            alert("Invalid email or password");
+        }
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const handleInput = (e) => {
@@ -82,11 +109,11 @@ const Login = () => {
                                 <br/>
                                 <br/>
                                 <div className="inline row justify-content-md-center">
-                                    <h4>Don't have an acccount?</h4>
+                                    <h4>don't have an account</h4>
                                     <NavLink className="fs-4" to="/register">Register here</NavLink>  
                                 </div>
                                 
-                            </div>
+                            </div>  
                                    
                             </form>
                             
