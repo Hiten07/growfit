@@ -109,7 +109,7 @@ const Login = () => {
                                 <br/>
                                 <br/>
                                 <div className="inline row justify-content-md-center">
-                                    <h4>don't have an account</h4>
+                                    <h4>Don't have an account</h4>
                                     <NavLink className="fs-4" to="/register">Register here</NavLink>  
                                 </div>
                                 
