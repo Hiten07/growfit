@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useAuth } from "../store/auth";
 
 
 const URL = "http://localhost:5000/api/auth/login";
@@ -9,6 +9,7 @@ const URL = "http://localhost:5000/api/auth/login";
 const Login = () => {
     
     const navigate = useNavigate();
+    const {storetokenInLS} = useAuth();
     const [user,setUser] = useState({
         email: "",
         password: "",
@@ -18,7 +19,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {  
+        try {
         const response = await fetch(URL, {
             method: "POST",
             headers: {
@@ -27,9 +28,11 @@ const Login = () => {
             body: JSON.stringify(user)
         })   
 
-        console.log(response);
 
         if(response.ok) {
+            const res_data = await response.json();
+            // store the token in local storage
+            storetokenInLS(res_data.token);
             setUser({ email: "", password: "",});
             alert("Login Successful");
             navigate("/");

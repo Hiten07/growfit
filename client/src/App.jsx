@@ -7,6 +7,7 @@ import Register from "./Pages/Register.jsx"
 import Navbar from "./components/Navbar.jsx"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import {Logout} from "./Pages/Logout.jsx";
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/login" Component={Login} />
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
+            <Route path="/logout" Component={Logout} />
         </Routes>
       </BrowserRouter>
     </>

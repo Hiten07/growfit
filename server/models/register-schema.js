@@ -81,5 +81,7 @@ registerSchema.methods.comparePassword = function (password) {
        return bcrypt.compare(password,this.password);
 }
 
+
+// defining the collection (table) name for the user in the database
 const registeredUsers = new mongoose.model("User",registerSchema); 
 module.exports = registeredUsers;
