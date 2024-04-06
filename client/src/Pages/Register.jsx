@@ -68,7 +68,7 @@ const Register = () => {
                         <div className="col mt-5">
                             <h1 className="text-center mt-5">Registration Form</h1>
 
-                            <br/>
+                            <br/> 
 
                             <form onSubmit={handleSubmit}>
                                 <div className="shadow-lg p-5 rounded">

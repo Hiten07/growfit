@@ -4,6 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { blue } from "@mui/material/colors";
+import { useAuth } from "../store/auth";
 
 const Contact = () => {
 
@@ -12,6 +13,19 @@ const Contact = () => {
         email: "",
         message: ""
     })
+
+    const [userData,setuserData] = useState(true); 
+
+    const {user} = useAuth();
+
+    if(userData && user) {
+        setContact({
+            username: user.username,
+            email: user.email,
+            message: "",
+        })   
+        setuserData(false)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
