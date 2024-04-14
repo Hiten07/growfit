@@ -26,11 +26,11 @@ const Home = () => {
 
                                 </div>
                                 <div className="btn-group gap-5 p-4 m-5">
-                                    <NavLink to="\register">
+                                    <NavLink to="/addgym">
                                         <button className="btn btn-outline-danger text-white fs-4 p-4" style={{borderRadius:"20px"}}><AddIcon sx={{ fontSize: 20 }}/> Add GYM</button>
                                     </NavLink>
 
-                                    <NavLink to="\contact" className="register-btn">
+                                    <NavLink to="gyms" className="register-btn">
                                         <button className="btn btn-outline-danger  text-white p-4 fs-4" style={{borderRadius:"20px"}}>Show GYM</button>
                                     </NavLink>
                                 </div>

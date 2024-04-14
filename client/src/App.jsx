@@ -5,6 +5,8 @@ import Contact from "./Pages/Contact.jsx"
 import Login from "./Pages/Login.jsx"
 import Register from "./Pages/Register.jsx"
 import Navbar from "./components/Navbar.jsx"
+import Addgym from "./Pages/Addgym.jsx"
+import Gyms from "./Pages/Gyms.jsx"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/login" Component={Login} />
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
+            <Route path="/addgym" Component={Addgym} />
+            <Route path="/gyms" Component={Gyms} />
         </Routes>
       </BrowserRouter>
     </>

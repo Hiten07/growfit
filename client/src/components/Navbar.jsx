@@ -19,7 +19,7 @@ const Navbar = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/about">
+                                    <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/Gyms">
                                         Gyms
                                     </NavLink>
                                 </li>
