@@ -17,12 +17,20 @@ const registerValidationSchema = z.object({
     .max(255, {message: "Email should have atmost 255 characters"}),
 
     phone: z
-    .number({required_error: "Phone Number is required"}),
+    .number({required_error: "Phone Number is required"})
     .min(10, {message: "Phone number should have atleast 10 digits..."})
-    .max(20, {message: "Phone number should have atmost 20 digits..."}),
+    .max(10, {message: "Phone number should have atmost 10 digits..."}),
+
+    userType: z
+    .string({required_error: "userType is required"}),
     
     password: z
     .string({required_error: "password is required"})
+    .min(3, {message: "Password should have alteast 3 characters"})
+    .max(1024, {message: "Password should have atmost 255 characters"}),
+
+    cpassword: z
+    .string({required_error: "confirm password is required"}) 
     .min(3, {message: "Password should have alteast 3 characters"})
     .max(1024, {message: "Password should have atmost 255 characters"}),
 })

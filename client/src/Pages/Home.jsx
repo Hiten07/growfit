@@ -26,12 +26,21 @@ const Home = () => {
 
                                 </div>
                                 <div className="btn-group gap-5 p-4 m-5">
+<<<<<<< HEAD
                                     <NavLink to="/addgym">
                                         <button className="btn btn-outline-danger text-white fs-4 p-4" style={{borderRadius:"20px"}}><AddIcon sx={{ fontSize: 20 }}/> Add GYM</button>
                                     </NavLink>
 
                                     <NavLink to="gyms" className="register-btn">
                                         <button className="btn btn-outline-danger  text-white p-4 fs-4" style={{borderRadius:"20px"}}>Show GYM</button>
+=======
+                                    <NavLink to="\register">
+                                        <button className="btn btn-outline-danger text-white fs-4 p-4" style={{borderRadius:"20px"}}><AddIcon sx={{ fontSize: 20 }}/> Add gym</button>
+                                    </NavLink>
+
+                                    <NavLink to="\contact" className="register-btn">
+                                        <button className="btn btn-outline-danger  text-white p-4 fs-4" style={{borderRadius:"20px"}}>Show gym</button>
+>>>>>>> 3c9d0a4dcc758ede7eb58ee8ced15305d816621b
                                     </NavLink>
                                 </div>
                             </div>
@@ -56,8 +65,8 @@ const Home = () => {
                 <div className="content d-flex flex-column align-items-center justify-content-center">
                     <div>
                         <h3 className=" fs-2 text-danger">Find Gym</h3>
-                        <p className="fs-4 text-white"><h className="fs-4">Find a gyms that fit for you</h><br/>-Know their address,services,
-                        charges and all you nedd a select a perfect for your killer workout place.</p>
+                        <p className="fs-4 text-white"><h className="fs-4">Find a gym that fits best for you</h><br/>-Know their address,services,
+                        charges and all you need is just one click away from your killer workout place.</p>
                     </div>
                 </div>
             </div>

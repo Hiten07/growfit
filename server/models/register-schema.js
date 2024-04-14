@@ -45,14 +45,16 @@ registerSchema.pre("save", async function (next) {
         // this keyword will return all the data 
         const user = this;
 
+        // checking if password is modified or not 
         if(!user.isModified("password")) {
             next();
         }
         try {
                 const salt = await bcrypt.genSalt(10);
                 const hashed_password = await bcrypt.hash(user.password,salt);
+                const hashed_cpassword = await bcrypt.hash(user.cpassword,salt);
                 user.password = hashed_password;  
-                user.cPassword = hashed_password; 
+                user.cPassword = hashed_cpassword; 
         } catch (error) {
             next(error);
         }
@@ -81,5 +83,7 @@ registerSchema.methods.comparePassword = function (password) {
        return bcrypt.compare(password,this.password);
 }
 
+
+// defining the collection (table) name for the user in the database
 const registeredUsers = new mongoose.model("User",registerSchema); 
 module.exports = registeredUsers;

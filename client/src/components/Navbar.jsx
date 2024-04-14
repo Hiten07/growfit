@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";  
 import "./Navbar.css";
+import { useAuth } from "../store/auth";
+
+
 const Navbar = () => {
+
+
+    const {isLoggedIn} = useAuth();
+
     return(
         <>
         <header>
@@ -19,7 +26,11 @@ const Navbar = () => {
                                 </li>
 
                                 <li className="nav-item">
+<<<<<<< HEAD
                                     <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/Gyms">
+=======
+                                    <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/gyms">
+>>>>>>> 3c9d0a4dcc758ede7eb58ee8ced15305d816621b
                                         Gyms
                                     </NavLink>
                                 </li>
@@ -29,16 +40,28 @@ const Navbar = () => {
                                         Contact
                                     </NavLink>
                                 </li>
+
+                                {isLoggedIn ? (
+                                <li className="nav-item">
+                                    <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/logout">
+                                        Logout
+                                    </NavLink>
+                                </li> ) :  (
+                                <>
                                 <li className="nav-item">
                                     <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/register">
                                         Register
                                     </NavLink>
                                 </li>
+                                
                                 <li className="nav-item">
                                     <NavLink id="nav-link" className="nav-link fs-3 text-white  px-3 py-3.5  hover-overlay hover:rounded-md" to="/login">
                                         Login
                                     </NavLink>
                                 </li>
+                                
+                                </>
+                                )}
                             </ul>
                         
                         </div>
