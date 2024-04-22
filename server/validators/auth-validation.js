@@ -17,9 +17,8 @@ const registerValidationSchema = z.object({
     .max(255, {message: "Email should have atmost 255 characters"}),
 
     phone: z
-    .number({required_error: "Phone Number is required"})
-    .min(10, {message: "Phone number should have atleast 10 digits..."})
-    .max(10, {message: "Phone number should have atmost 10 digits..."}),
+    .coerce
+    .number({required_error: "Phone Number is required"}),
 
     userType: z
     .string({required_error: "userType is required"}),

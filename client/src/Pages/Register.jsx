@@ -35,7 +35,7 @@ const Register = () => {
                 // store token in localstorage
                 storetokenInLS(res_data.token);
                 setUser({username: "",email: "",phone: "",userType: "",password: "",cpassword: ""});
-                navigate("/Login");
+                navigate("/");
             }
         } 
         
@@ -138,7 +138,6 @@ const Register = () => {
                                             id="radio2" 
                                             value="gym-owner"
                                             onChange={handleInput}
-                                            defaultChecked
                                             />
                                             gym-owner
                                         </label>
